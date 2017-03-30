@@ -1,6 +1,6 @@
 FROM jboss/base-jdk:8
 
-ENV KEYCLOAK_VERSION 2.5.0.Final
+ENV KEYCLOAK_VERSION 3.0.0.CR1
 
 USER root
 RUN yum install -y unzip wget && yum clean all
@@ -8,7 +8,7 @@ RUN yum install -y unzip wget && yum clean all
 USER jboss
 
 RUN cd /opt/jboss/ && \
-    wget https://downloads.jboss.org/keycloak/$KEYCLOAK_VERSION/keycloak-proxy-$KEYCLOAK_VERSION.zip && \
+    wget http://central.maven.org/maven2/org/keycloak/keycloak-proxy-dist/$KEYCLOAK_VERSION/keycloak-proxy-dist-$KEYCLOAK_VERSION.zip && \
     unzip keycloak-proxy-$KEYCLOAK_VERSION.zip && mv /opt/jboss/keycloak-proxy-$KEYCLOAK_VERSION /opt/jboss/keycloak-proxy
 
 EXPOSE 8080 8443
