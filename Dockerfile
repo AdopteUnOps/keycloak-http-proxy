@@ -1,6 +1,6 @@
 FROM jboss/base-jdk:8
 
-ENV KEYCLOAK_VERSION 3.0.0.CR1
+ENV KEYCLOAK_VERSION 3.2.1.Final
 
 USER root
 RUN yum install -y unzip wget && yum clean all
