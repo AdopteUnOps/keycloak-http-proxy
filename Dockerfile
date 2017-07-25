@@ -9,7 +9,7 @@ USER jboss
 
 RUN cd /opt/jboss/ && \
     wget https://downloads.jboss.org/keycloak/$KEYCLOAK_VERSION/keycloak-proxy-$KEYCLOAK_VERSION.zip && \
-    unzip keycloak-proxy-dist-$KEYCLOAK_VERSION.zip && mv /opt/jboss/keycloak-proxy-$KEYCLOAK_VERSION /opt/jboss/keycloak-proxy
+    unzip keycloak-proxy-$KEYCLOAK_VERSION.zip && mv /opt/jboss/keycloak-proxy-$KEYCLOAK_VERSION /opt/jboss/keycloak-proxy
 
 EXPOSE 8080 8443
 
